@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ydma-note" />
+        <module name="ydma-cloud-zuul" />
+        <module name="ydma-cloud-eureke" />
+        <module name="ydma-evaluation" />
+        <module name="ydma-issue" />
+        <module name="ydma-user" />
+        <module name="ydma-web" />
+        <module name="ymda-video" />
+        <module name="ydma-direction" />
+        <module name="ydma-course" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="untitled" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ydma-cloud-eureke" options="" />
+      <module name="ydma-cloud-zuul" options="" />
+      <module name="ydma-course" options="" />
+      <module name="ydma-direction" options="" />
+      <module name="ydma-evaluation" options="" />
+      <module name="ydma-issue" options="" />
+      <module name="ydma-note" options="" />
+      <module name="ydma-user" options="" />
+      <module name="ydma-web" options="" />
+      <module name="ymda-video" options="" />
+    </option>
+  </component>
+</project>
