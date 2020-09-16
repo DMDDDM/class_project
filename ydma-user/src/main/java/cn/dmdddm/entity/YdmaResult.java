@@ -8,9 +8,9 @@ public class YdmaResult implements Serializable {
     private int code;
 
     private String msg;
-    //
-    private Date date;
 
+    private Date date;
+    //保存token
     private String data;
 
     public int getCode() {

@@ -9,6 +9,7 @@ import cn.dmdddm.ydma.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.rmi.CORBA.Util;
 import java.util.Date;
 @Service
 public class UserServiceImpl implements UserService{
@@ -18,8 +19,17 @@ public class UserServiceImpl implements UserService{
 
     public YdmaResult addUser(String name, String password){
 
-        User user = new User();
+        User user1 = userDao.selectByName(name);
+        YdmaResult ydmaResult = new YdmaResult();
+        // 用户名已存在
+        if (user1 != null){
+            ydmaResult.setCode(YdmaConstant.ERROR3);
+            ydmaResult.setMsg(YdmaConstant.REGIST_ERROP);
+            ydmaResult.setDate(new Date());
+            return ydmaResult;
 
+        }
+        User user = new User();
         user.setName(name);
         //加密密码
         String salt = PasswordUtil.salt();
@@ -30,27 +40,27 @@ public class UserServiceImpl implements UserService{
         user.setRegtime(new Date());
         userDao.insertSelective(user);
 
-        YdmaResult ydmaresult = new YdmaResult();
-        ydmaresult.setCode(0);
-        ydmaresult.setMsg("注册成功");
-        ydmaresult.setDate(new Date());
+        ydmaResult.setCode(0);
+        ydmaResult.setMsg("注册成功");
+        ydmaResult.setDate(new Date());
 
-        return ydmaresult;
+        return ydmaResult;
     }
     public YdmaResult checkUser(String name, String password){
         //检查账号和密码的正确性
         YdmaResult result = new YdmaResult();
         User user = userDao.selectByName(name);
-        // 获取User盐值
-        String salt = user.getSalt();
-        //获取加密后的密码
-        String md5Password = PasswordUtil.md5(password+salt);
         //没有这个用户
         if(user==null) {
             result.setCode(YdmaConstant.ERROR1);
             result.setMsg(YdmaConstant.LOGIN_ERROP1);
             return result;
         }
+
+        // 获取User盐值
+        String salt = user.getSalt();
+        //获取加密后的密码
+        String md5Password = PasswordUtil.md5(password+salt);
         //密码认证不成功
         if( !md5Password.equals(user.getPassword())) {
             result.setCode(YdmaConstant.ERROR2);
