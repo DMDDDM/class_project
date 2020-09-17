@@ -74,4 +74,21 @@ public class UserServiceImpl implements UserService{
         result.setData(token);
         return result;
     }
+
+    @Override
+    public YdmaResult loadUser(int userId) {
+        YdmaResult result = new YdmaResult();
+        User user = userDao.selectByPrimaryKey(userId);
+        if (user == null){
+            result.setCode(YdmaConstant.ERROR1);
+            result.setMsg(YdmaConstant.QUERY_EMPTY_ERROR);
+            return result;
+        }
+        result.setCode(YdmaConstant.SUCCESS);
+        result.setMsg(YdmaConstant.QUERY_SUCCESS);
+        result.setDate(new Date());
+        result.setData(user);
+
+        return result;
+    }
 }

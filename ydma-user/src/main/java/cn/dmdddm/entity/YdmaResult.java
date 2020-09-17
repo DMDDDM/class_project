@@ -10,8 +10,18 @@ public class YdmaResult implements Serializable {
     private String msg;
 
     private Date date;
+
     //保存token
-    private String data;
+    private Object data;
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
 
     public int getCode() {
         return code;
@@ -37,11 +47,5 @@ public class YdmaResult implements Serializable {
         this.date = date;
     }
 
-    public String getData() {
-        return data;
-    }
 
-    public void setData(String data) {
-        this.data = data;
-    }
 }

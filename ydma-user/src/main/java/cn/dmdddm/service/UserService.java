@@ -20,4 +20,12 @@ public interface UserService {
     * @return           ydmaResult
     */
    YdmaResult checkUser(String name, String password);
+
+   /**
+    * 通过ID查询用户。
+    *
+    * @param userId
+    * @return
+    */
+   YdmaResult loadUser(int userId);
 }

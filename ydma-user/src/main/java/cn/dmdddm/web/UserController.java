@@ -23,4 +23,8 @@ public class UserController {
     public YdmaResult login(String name, String password){
         return userService.checkUser(name,password);
     }
+    @PostMapping("/user/get")
+    public YdmaResult load(int userId) {
+        return userService.loadUser(userId);
+    }
 }
