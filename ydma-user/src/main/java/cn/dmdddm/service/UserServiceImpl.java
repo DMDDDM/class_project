@@ -1,15 +1,14 @@
 package cn.dmdddm.service;
 
 import cn.dmdddm.Util.JWTUtil;
+import cn.dmdddm.Util.PasswordUtil;
 import cn.dmdddm.entity.User;
 import cn.dmdddm.entity.YdmaConstant;
 import cn.dmdddm.entity.YdmaResult;
-import cn.dmdddm.Util.PasswordUtil;
 import cn.dmdddm.ydma.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.rmi.CORBA.Util;
 import java.util.Date;
 @Service
 public class UserServiceImpl implements UserService{

@@ -3,7 +3,6 @@ package cn.dmdddm.web;
 import cn.dmdddm.entity.YdmaResult;
 import cn.dmdddm.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 

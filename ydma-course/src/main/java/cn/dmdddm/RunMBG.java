@@ -14,7 +14,7 @@ public class RunMBG {
         List<String> warnings = new ArrayList<String>();
         boolean overwrite = true;
         //指定mbg.xml资源路径src/main/resources
-        File configFile = new File("D:\\class_project\\class_project\\ydma-user\\src\\main\\resources\\mbg.xml");
+        File configFile = new File("D:\\class_project\\class_project\\ydma-course\\src\\main\\resources\\mbg.xml");
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);
         DefaultShellCallback callback = new DefaultShellCallback(overwrite);

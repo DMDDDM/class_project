@@ -41,7 +41,7 @@
         </javaClientGenerator>
 
         <!-- 指定根据哪些表生成实体类、sql定义、mapper映射器的接口 -->
-        <table tableName="user" domainObjectName="User" enableSelectByExample="false"
+        <table tableName="direction" domainObjectName="Direction" enableSelectByExample="false"
                enableDeleteByExample="false"
                enableCountByExample="false"
                enableUpdateByExample="false"    >
