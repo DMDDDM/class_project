@@ -19,6 +19,7 @@
         <module>ydma-web</module>
         <module>ydma-cloud-eureke</module>
         <module>ydma-cloud-zuul</module>
+        <module>redis</module>
     </modules>
     <dependencies>
         <dependency>

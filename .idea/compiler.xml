@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="redis" />
         <module name="ydma-note" />
         <module name="ydma-cloud-zuul" />
         <module name="ydma-cloud-eureke" />

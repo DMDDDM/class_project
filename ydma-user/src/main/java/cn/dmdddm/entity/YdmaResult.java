@@ -14,6 +14,9 @@ public class YdmaResult implements Serializable {
     //保存token
     private Object data;
 
+
+
+
     public Object getData() {
         return data;
     }

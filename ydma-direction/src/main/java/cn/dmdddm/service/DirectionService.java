@@ -4,7 +4,7 @@ import cn.dmdddm.entity.YdmaResult;
 
 public interface DirectionService {
     /**
-     * 查找所有启动类。
+     * 查找所有。
      *
      * @return
      */

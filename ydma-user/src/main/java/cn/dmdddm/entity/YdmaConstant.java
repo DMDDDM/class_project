@@ -4,9 +4,9 @@ package cn.dmdddm.entity;
 public class YdmaConstant {
 
     public static final int SUCCESS=0;
-    public static final int ERROR1=0;
-    public static final int ERROR3=0;
-    public static final int ERROR2=0;
+    public static final int ERROR1=1;
+    public static final int ERROR3=1;
+    public static final int ERROR2=1;
     public static final String REGIST_SUCCESS="注册成功";
     public static final String REGIST_ERROP="用户名已存在";
     public static final String LOGIN_ERROP1="账户不存在";
